@@ -15,6 +15,7 @@ function ca_faq_user_default_permissions() {
     'name' => 'create faq content',
     'roles' => array(
       0 => 'faq admin',
+      1 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function ca_faq_user_default_permissions() {
     'name' => 'delete any faq content',
     'roles' => array(
       0 => 'faq admin',
+      1 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -33,6 +35,7 @@ function ca_faq_user_default_permissions() {
     'name' => 'delete own faq content',
     'roles' => array(
       0 => 'faq admin',
+      1 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -42,6 +45,7 @@ function ca_faq_user_default_permissions() {
     'name' => 'edit any faq content',
     'roles' => array(
       0 => 'faq admin',
+      1 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -51,6 +55,7 @@ function ca_faq_user_default_permissions() {
     'name' => 'edit own faq content',
     'roles' => array(
       0 => 'faq admin',
+      1 => 'webmaster',
     ),
     'module' => 'node',
   );
