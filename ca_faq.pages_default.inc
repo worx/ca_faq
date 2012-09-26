@@ -151,7 +151,7 @@ function ca_faq_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_faq_admin-panel_pane_1';
+    $pane->subtype = 'ca_faq_admin-ca_faq_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
