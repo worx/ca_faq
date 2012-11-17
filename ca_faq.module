@@ -5,3 +5,69 @@
  */
 
 include_once 'ca_faq.features.inc';
+
+/**
+ * Implements hook_menu()
+ */
+function ca_faq_menu() {
+  $items['admin/config/worx_features/faq'] = array(
+    'title' => 'FAQ Configuration',
+    'description' => 'Override settings for ca_faq',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_faq_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_faq.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_faq'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/worx_features/faq/general'] = array(
+    'title' => 'General Settings',
+    'description' => 'Override settings for ca_faq',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_faq_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_faq.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_faq'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  
+  return $items;
+}
+
+/**
+ * implements hook_menu_alter().
+ */
+function ca_faq_menu_alter(&$items) {
+  $items['event']['title'] = variable_get('ca_faq_menu_title', 'FAQ');
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_faq_panels_pre_render($panel, $renderer) {
+  if (isset($panel->content['new-6']) && $panel->content['new-6']->subtype == 'ca_event-ca_event_list_1') {
+    $panel->title = variable_get('ca_faq_panel_title', 'FAQ');
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ca_faq_views_pre_view(&$view, &$display_id, &$args) {
+  if ($display_id == 'ca_event_list_1') {
+    $view->set_items_per_page(variable_get('ca_faq_list_count', 5));
+  }
+  elseif ($display_id == 'ca_event_block_1') {
+    $view->set_items_per_page(variable_get('ca_faq_block_count', 1));
+  }
+}
+
+/**
+* Implementation of hook_ctools_plugin_directory()
+*/
+function ca_faq_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools') {
+    return 'plugins/' . $plugin_type;;
+  }
+}
+
