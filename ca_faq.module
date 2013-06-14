@@ -35,22 +35,6 @@ function ca_faq_menu() {
 }
 
 /**
- * implements hook_menu_alter().
- */
-function ca_faq_menu_alter(&$items) {
-  $items['event']['title'] = variable_get('ca_faq_menu_title', 'FAQ');
-}
-
-/**
- * Implements hook_panels_pre_render().
- */
-function ca_faq_panels_pre_render($panel, $renderer) {
-  if (isset($panel->content['new-6']) && $panel->content['new-6']->subtype == 'ca_event-ca_event_list_1') {
-    $panel->title = variable_get('ca_faq_panel_title', 'FAQ');
-  }
-}
-
-/**
  * Implements hook_views_pre_render().
  */
 function ca_faq_views_pre_view(&$view, &$display_id, &$args) {

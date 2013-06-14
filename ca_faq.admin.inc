@@ -17,20 +17,6 @@
 function ca_faq_settings_form() {
   $form = array();
 
-  $form['ca_faq_panel_title'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Title'),
-    '#default_value' => variable_get('ca_faq_panel_title', 'FAQ'),
-    '#required' => TRUE,
-    '#description' => t('What would you like the panel title to be?'),
-  );
-  $form['ca_faq_menu_title'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Menu Title'),
-    '#default_value' => variable_get('ca_faq_menu_title', 'FAQ'),
-    '#required' => TRUE,
-    '#description' => t('What would you like the menu title to be?'),
-  );
   $form['ca_faq_list_count'] = array(
     '#type' => 'textfield',
     '#title' => t('FAQs per page'),
