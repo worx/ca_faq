@@ -13,7 +13,7 @@ function ca_faq_user_default_roles() {
   // Exported role: faq admin.
   $roles['faq admin'] = array(
     'name' => 'faq admin',
-    'weight' => '5',
+    'weight' => 5,
     'machine_name' => 'faq_admin',
   );
 

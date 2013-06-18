@@ -25,9 +25,9 @@ function ca_faq_user_default_permissions() {
   $permissions['delete any faq content'] = array(
     'name' => 'delete any faq content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'faq admin',
-      1 => 'webmaster',
+      'administrator' => 'administrator',
+      'faq admin' => 'faq admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
