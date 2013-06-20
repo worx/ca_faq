@@ -207,6 +207,8 @@ function ca_faq_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA FAQ: Administration', 'ca_faq_admin');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA FAQ: Administration';
+  $handler->display->display_options['pane_category']['name'] = 'CA Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_faq_admin'] = $view;
 
   $view = new view();
