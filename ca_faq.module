@@ -38,10 +38,7 @@ function ca_faq_menu() {
  * Implements hook_views_pre_render().
  */
 function ca_faq_views_pre_view(&$view, &$display_id, &$args) {
-  if ($display_id == 'ca_event_list_1') {
-    $view->set_items_per_page(variable_get('ca_faq_list_count', 5));
-  }
-  elseif ($display_id == 'ca_event_block_1') {
+  if ($display_id == 'ca_event_block_1') {
     $view->set_items_per_page(variable_get('ca_faq_block_count', 1));
   }
 }

@@ -17,41 +17,12 @@
 function ca_faq_settings_form() {
   $form = array();
 
-  $form['ca_faq_list_count'] = array(
-    '#type' => 'textfield',
-    '#title' => t('FAQs per page'),
-    '#default_value' => variable_get('ca_faq_list_count', 5),
-    '#required' => TRUE,
-    '#description' => t('How many faqs would you like displayed per page?'),
-  );
   $form['ca_faq_block_count'] = array(
     '#type' => 'textfield',
     '#title' => t('FAQs in the block'),
     '#default_value' => variable_get('ca_faq_block_count', 1),
     '#required' => TRUE,
     '#description' => t('How many faqs would you like displayed in the block?'),
-  );
-  $form['ca_faq_list_template'] = array(
-    '#type' => 'select',
-    '#title' => t('FAQ\'s list template'),
-    '#options' => array(
-      'ca_faq_list_template_one' => t('Template one'),
-      'ca_faq_list_template_two' => t('Template two'),
-      'ca_faq_list_template_three' => t('Template three'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_faq_list_template', 'ca_faq_list_template_one'),
-  );
-  $form['ca_faq_node_template'] = array(
-    '#type' => 'select',
-    '#title' => t('FAQ\'s node template'),
-    '#options' => array(
-      'ca_faq_node_template_one' => t('Template one'),
-      'ca_faq_node_template_two' => t('Template two'),
-      'ca_faq_node_template_three' => t('Template three'),
-    ),
-    '#required' => TRUE,
-    '#default_value' => variable_get('ca_faq_node_template', 'ca_faq_node_template_one'),
   );
   $form['actions'] = array(
     '#type' => 'actions',
