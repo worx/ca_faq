@@ -10,8 +10,8 @@
 function ca_faq_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:faq-page
-  $menu_links['main-menu:faq-page'] = array(
+  // Exported menu link: main-menu_faq:faq-page
+  $menu_links['main-menu_faq:faq-page'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'faq-page',
     'router_path' => 'faq-page',
@@ -20,6 +20,7 @@ function ca_faq_menu_default_menu_links() {
       'attributes' => array(
         'title' => '',
       ),
+      'identifier' => 'main-menu_faq:faq-page',
     ),
     'module' => 'menu',
     'hidden' => 0,
@@ -27,6 +28,7 @@ function ca_faq_menu_default_menu_links() {
     'has_children' => 0,
     'expanded' => 0,
     'weight' => 0,
+    'customized' => 1,
   );
   // Translatables
   // Included for use with string extractors like potx.

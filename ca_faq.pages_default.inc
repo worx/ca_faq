@@ -145,10 +145,11 @@ function ca_faq_default_page_manager_pages() {
   );
   $display->cache = array();
   $display->title = 'FAQ';
+  $display->uuid = 'cd06f758-1be5-45b8-94f6-013302bfc4f5';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-b005fe6a-5431-4529-8cd7-f623e314983d';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_faq_admin-ca_faq_admin';
@@ -163,10 +164,11 @@ function ca_faq_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['middle'][0] = 'new-1';
+    $pane->uuid = 'b005fe6a-5431-4529-8cd7-f623e314983d';
+    $display->content['new-b005fe6a-5431-4529-8cd7-f623e314983d'] = $pane;
+    $display->panels['middle'][0] = 'new-b005fe6a-5431-4529-8cd7-f623e314983d';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-b005fe6a-5431-4529-8cd7-f623e314983d';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_faq_administration'] = $page;
