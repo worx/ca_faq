@@ -30,10 +30,10 @@ function ca_faq_menu_default_menu_links() {
     'weight' => 0,
     'customized' => 1,
   );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('FAQ');
-
 
   return $menu_links;
 }
