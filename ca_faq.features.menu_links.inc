@@ -10,7 +10,7 @@
 function ca_faq_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu_faq:faq-page
+  // Exported menu link: main-menu_faq:faq-page.
   $menu_links['main-menu_faq:faq-page'] = array(
     'menu_name' => 'main-menu',
     'link_path' => 'faq-page',
