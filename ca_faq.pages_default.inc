@@ -146,8 +146,8 @@ function ca_faq_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'FAQ';
   $display->uuid = 'cd06f758-1be5-45b8-94f6-013302bfc4f5';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_faq_administration_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
